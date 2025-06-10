@@ -1,0 +1,73 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /api
+
+spring:
+  application:
+    name: smdc
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/smdc?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/smdc?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&useUnicode=true
+    username: root
+    password: 123456
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  # Jackson配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+smdc:
+  upload:
+    path: D:/smdc/images/
+
+# MyBatis-Plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.kang.smdc.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# 微信小程序配置
+wx:
+  miniapp:
+    appid: your_appid_here
+    secret: your_secret_here
+    token: your_token_here
+    aesKey: your_aes_key_here
+    msgDataFormat: JSON
+
+# Knife4j配置
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+    swagger-model-name: 实体类列表
+  basic:
+    enable: false
+
+# 日志配置
+logging:
+  level:
+    root: info
+    com.kang.smdc: debug
+  file:
+    name: logs/smdc.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n" 

@@ -1,0 +1,14 @@
+.user-container {
+  padding: 100rpx 40rpx;
+  text-align: center;
+}
+.user-title {
+  font-size: 44rpx;
+  color: #409EFF;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.user-info {
+  font-size: 28rpx;
+  color: #888;
+} 

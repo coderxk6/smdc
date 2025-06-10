@@ -1,0 +1,4 @@
+<view class="user-container">
+  <view class="user-title">个人中心</view>
+  <view class="user-info">欢迎使用扫码点餐系统</view>
+</view> 

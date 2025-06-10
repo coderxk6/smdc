@@ -1,0 +1,42 @@
+<view class="search-container">
+  <!-- 搜索栏 -->
+  <view class="search-bar-wrapper">
+    <input class="search-input" type="text" placeholder="搜索您想吃的菜品" bindinput="onSearchInput" bindconfirm="onSearchConfirm" value="{{searchText}}" focus="{{true}}"/>
+    <text class="cancel-btn" bindtap="onCancelSearch">取消</text>
+  </view>
+
+  <!-- 搜索结果 -->
+  <scroll-view scroll-y class="search-results-scroll" wx:if="{{searchResults.length > 0}}">
+    <view class="dish-list">
+      <view wx:for="{{searchResults}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
+        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <view class="dish-info">
+          <text class="dish-name">{{item.name}}</text>
+          <view class="dish-meta">
+            <text class="dish-price">¥ {{item.price}}</text>
+            <text class="dish-description">{{item.description || '暂无描述'}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 搜索历史或热门搜索（可选） -->
+  <view class="search-history-section" wx:if="{{!searchResults.length && searchHistory.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">搜索历史</text>
+      <text class="clear-history" bindtap="clearSearchHistory">清空</text>
+    </view>
+    <view class="history-tags">
+      <text wx:for="{{searchHistory}}" wx:key="*this" class="history-tag" bindtap="quickSearch" data-keyword="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="no-results" wx:if="{{searchText && searchResults.length === 0}}">
+    抱歉，未找到相关菜品。
+  </view>
+
+  <view class="no-search" wx:if="{{!searchText && !searchHistory.length}}">
+    请输入关键词进行搜索
+  </view>
+</view> 

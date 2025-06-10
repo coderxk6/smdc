@@ -1,0 +1,152 @@
+/* miniapp/pages/search/search.wxss */
+.search-container {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.03);
+}
+
+.search-input {
+  flex: 1;
+  height: 70rpx;
+  padding: 0 20rpx;
+  background-color: #f0f0f0;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.cancel-btn {
+  font-size: 32rpx;
+  color: var(--primary-color);
+  padding: 10rpx 0;
+  flex-shrink: 0;
+}
+
+.search-results-scroll {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.dish-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.dish-image {
+  width: 200rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  border-top-left-radius: 16rpx;
+  border-bottom-left-radius: 16rpx;
+}
+
+.dish-info {
+  flex: 1;
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dish-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  word-break: break-all;
+}
+
+.dish-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.dish-price {
+  font-size: 38rpx;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.dish-description {
+  font-size: 26rpx;
+  color: #999;
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-history-section {
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.clear-history {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.history-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.history-tag {
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  margin: 0 20rpx 20rpx 0;
+}
+
+.no-results,
+.no-search {
+  text-align: center;
+  color: #999;
+  font-size: 30rpx;
+  padding: 80rpx 20rpx;
+} 

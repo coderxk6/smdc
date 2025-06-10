@@ -1,0 +1,74 @@
+<view class="index-container">
+  <!-- 顶部区域：店铺信息和搜索框 -->
+  <view class="top-section">
+    <view class="shop-info" bindtap="goToShopInfo">
+      <image class="shop-logo" src="{{homeData.shopInfo.logo || '/images/default-logo.png'}}" mode="aspectFill"></image>
+      <view class="shop-name-status">
+        <text class="shop-name">{{homeData.shopInfo.name || '扫码点餐'}}</text>
+        <view class="shop-status {{homeData.shopInfo.status === 1 ? 'open' : 'closed'}}">
+          {{homeData.shopInfo.status === 1 ? '营业中' : '休息中'}}
+        </view>
+      </view>
+      <text class="shop-slogan">{{homeData.shopInfo.slogan || '扫码点餐，便捷生活'}}</text>
+    </view>
+
+    <view class="search-bar" bindtap="goToSearch">
+      <text class="search-icon">🔍</text>
+      <text class="search-placeholder">搜索菜品</text>
+    </view>
+  </view>
+
+  <!-- 分类导航 -->
+  <scroll-view class="category-nav" scroll-x="true" enable-flex="true">
+    <view wx:for="{{homeData.categories}}" wx:key="id" class="category-item" bindtap="goToCategory" data-category-id="{{item.id}}" data-category-name="{{item.name}}">
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+
+  <!-- 推荐菜品 -->
+  <view class="dish-section" wx:if="{{homeData.recommendDishes && homeData.recommendDishes.length > 0}}">
+    <text class="section-title">⭐️ 推荐菜品</text>
+    <view class="dish-list">
+      <view wx:for="{{homeData.recommendDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
+        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <view class="dish-info">
+          <text class="dish-name">{{item.name}}</text>
+          <text class="dish-price">¥ {{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热门菜品 -->
+  <view class="dish-section" wx:if="{{homeData.hotDishes && homeData.hotDishes.length > 0}}">
+    <text class="section-title">🔥 热门菜品</text>
+    <view class="dish-list">
+      <view wx:for="{{homeData.hotDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
+        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <view class="dish-info">
+          <text class="dish-name">{{item.name}}</text>
+          <text class="dish-price">¥ {{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新品菜品 -->
+  <view class="dish-section" wx:if="{{homeData.newDishes && homeData.newDishes.length > 0}}">
+    <text class="section-title">✨ 新品上市</text>
+    <view class="dish-list">
+      <view wx:for="{{homeData.newDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
+        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <view class="dish-info">
+          <text class="dish-name">{{item.name}}</text>
+          <text class="dish-price">¥ {{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="no-data-tip" wx:if="{{!homeData.shopInfo && !homeData.categories.length && !homeData.recommendDishes.length && !homeData.hotDishes.length && !homeData.newDishes.length}}">
+    暂无数据，请稍后重试或联系商家。
+  </view>
+
+</view> 

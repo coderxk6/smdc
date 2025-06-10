@@ -1,0 +1,10 @@
+/* miniapp/styles/theme.wxss */
+:root {
+  --primary-color: #0097FF; /* 饿了么蓝色调 */
+  --light-primary-color: #e6f7ff;
+  --dark-primary-color: #006bb6;
+  --text-color-dark: #333;
+  --text-color-light: #666;
+  --border-color: #eee;
+  --background-color: #f8f8f8;
+} 

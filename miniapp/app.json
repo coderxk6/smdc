@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/category/category",
+    "pages/dish/dish",
+    "pages/cart/cart",
+    "pages/order/list/list",
+    "pages/order/confirm/confirm",
+    "pages/order/detail/detail",
+    "pages/user/user",
+    "pages/shopinfo/shopinfo",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0097FF",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "扫码点餐",
+    "backgroundColor": "#f7fafd",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#0097FF",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tab-home.png",
+        "selectedIconPath": "static/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/tab-user.png",
+        "selectedIconPath": "static/tab-user-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
