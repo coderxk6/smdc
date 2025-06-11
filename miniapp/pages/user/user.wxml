@@ -1,4 +1,23 @@
-<view class="user-container">
-  <view class="user-title">个人中心</view>
-  <view class="user-info">欢迎使用扫码点餐系统</view>
+<view class="user-center-container">
+  <!-- 顶部导航栏，由小程序自动生成，无需在此编写 -->
+
+  <!-- 用户信息区域 -->
+  <view class="user-info-card" bindtap="editUserInfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <text class="welcome-text">欢迎使用扫码点餐系统</text>
+  </view>
+
+  <!-- 功能菜单列表 -->
+  <view class="menu-list">
+    <block wx:for="{{menuList}}" wx:key="name">
+      <view class="menu-item" bindtap="navigateToPage" data-path="{{item.path}}">
+        <image class="menu-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        <text class="menu-name">{{item.name}}</text>
+        <image class="arrow-right" src="/images/arrow-right.png" mode="aspectFit"></image>
+      </view>
+    </block>
+  </view>
+
+  <!-- 底部Tab导航栏，由小程序配置，无需在此编写 -->
 </view> 

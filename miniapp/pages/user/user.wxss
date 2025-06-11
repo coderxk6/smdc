@@ -1,3 +1,5 @@
+@import '../../styles/theme.wxss'; /* 导入主题颜色 */
+
 .user-container {
   padding: 100rpx 40rpx;
   text-align: center;
@@ -11,4 +13,77 @@
 .user-info {
   font-size: 28rpx;
   color: #888;
+}
+
+.user-center-container {
+  padding: 30rpx;
+  background-color: var(--weui-BG-0); /* 使用主题中的背景色 */
+  min-height: 100vh; /* 确保背景覆盖整个页面 */
+}
+
+.user-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+  background-color: var(--weui-BG-2); /* 使用主题中的卡片背景色 */
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 30rpx;
+}
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+  border: 4rpx solid var(--weui-FG-1); /* 使用主题中的边框色 */
+}
+
+.nickname {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: var(--weui-FG-0); /* 使用主题中的主文字颜色 */
+  margin-bottom: 10rpx;
+}
+
+.welcome-text {
+  font-size: 28rpx;
+  color: var(--weui-FG-3); /* 使用主题中的次要文字颜色 */
+}
+
+.menu-list {
+  background-color: var(--weui-BG-2);
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* 确保圆角显示 */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 40rpx;
+  border-bottom: 1rpx solid var(--weui-FG-5); /* 使用主题中的分割线颜色 */
+  font-size: 32rpx;
+  color: var(--weui-FG-1);
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* 最后一个不显示下划线 */
+}
+
+.menu-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.menu-name {
+  flex: 1;
+}
+
+.arrow-right {
+  width: 32rpx;
+  height: 32rpx;
+  filter: brightness(0.6); /* 调整箭头颜色使其更柔和 */
 } 

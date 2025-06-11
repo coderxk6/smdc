@@ -1,4 +1,31 @@
 /* miniapp/styles/theme.wxss */
+/* 品牌主色调 */
+:root {
+  --brand-color: #FF5722; 
+  /* 微信小程序官方推荐色板（weui）作为基础，并进行调整 */
+  --weui-BG-0: #f8f8f8; /* 页面背景色 */
+  --weui-BG-1: #ededed; /* 次级背景色 */
+  --weui-BG-2: #ffffff; /* 浮层、卡片背景色 */
+
+  --weui-FG-0: #000000; /* 主要文字色 */
+  --weui-FG-1: #333333; /* 次要文字色 */
+  --weui-FG-2: #666666; /* 辅助文字色 */
+  --weui-FG-3: #999999; /* 占位文字色 */
+  --weui-FG-4: #B2B2B2; /* 分割线 */
+  --weui-FG-5: #EBEBEB; /* 分割线 Light */
+
+  --weui-RED: #FA5151; /* 错误、警示 */
+  --weui-GREEN: #07C160; /* 成功 */
+  --weui-BLUE: #10AEFF; /* 链接、按钮 */
+  --weui-ORANGE: #FF8F1F; /* 提醒 */
+}
+
+/* 顶部导航栏颜色 */
+page {
+  --weui-BG-COLOR-NAV: var(--brand-color);
+  --weui-FG-COLOR-NAV: #ffffff;
+}
+
 :root {
   --primary-color: #0097FF; /* 饿了么蓝色调 */
   --light-primary-color: #e6f7ff;

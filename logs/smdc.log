@@ -942,3 +942,867 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required r
 2025-06-10 18:43:02.186 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
 2025-06-10 18:43:02.193 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
 2025-06-10 18:43:02.210 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 7.787 seconds (JVM running for 10.079)
+2025-06-11 11:52:56.583 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 4528 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 11:52:56.586 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 11:52:56.586 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:52:58.024 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 11:52:58.026 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 11:52:58.026 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 11:52:58.026 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 11:52:58.026 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 11:52:58.039 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 11:52:58.049 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 11:52:58.049 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 11:52:58.265 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 11:52:58.265 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1632 ms
+2025-06-11 11:53:00.368 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 11:53:00.485 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 11:53:00.506 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 11:53:00.672 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 11:53:00.673 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 11:53:00.677 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 11:53:00.710 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 11:53:00.857 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 11:53:00.867 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 11:53:00.870 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 11:53:00.873 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 11:53:00.894 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 11:53:00.898 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 11:53:00.909 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 11:53:00.911 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 11:53:00.921 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 11:53:00.926 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 11:53:00.929 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 11:53:00.948 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 11:53:00.962 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 11:53:00.965 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 11:53:00.983 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 11:53:00.999 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 5.07 seconds (JVM running for 7.342)
+2025-06-11 12:12:42.659 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 12:12:42.659 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 12:12:42.664 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-06-11 12:12:42.847 [http-nio-8080-exec-2] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 12:12:43.034 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 12:12:43.395 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 12:16:27.760 [http-nio-8080-exec-5] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 12:32:57.806 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m11s5ms328µs400ns).
+2025-06-11 13:08:49.196 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m21s58ms862µs600ns).
+2025-06-11 13:16:15.768 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m26s547ms638µs700ns).
+2025-06-11 13:30:45.319 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m59s450ms121µs600ns).
+2025-06-11 14:01:38.200 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 26604 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:01:38.203 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:01:38.204 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:01:40.341 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:01:40.344 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:01:40.344 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:01:40.344 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:01:40.345 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:01:40.370 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:01:40.383 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:01:40.383 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:01:40.740 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:01:40.740 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2487 ms
+2025-06-11 14:01:43.870 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:01:44.084 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:01:44.119 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:01:44.461 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:01:44.468 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:01:44.472 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:01:44.533 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:01:44.740 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:01:44.753 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:01:44.755 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:01:44.757 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:01:44.772 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:01:44.776 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:01:44.785 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:01:44.787 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:01:44.791 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:01:44.796 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:01:44.800 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:01:44.817 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:01:44.824 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:01:44.827 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:01:44.836 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:01:44.857 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 7.349 seconds (JVM running for 8.859)
+2025-06-11 14:01:46.957 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:01:46.957 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:01:46.958 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 14:01:47.027 [http-nio-8080-exec-3] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:01:47.092 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:01:47.232 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:04:44.883 [http-nio-8080-exec-6] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:08:38.125 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 41452 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:08:38.128 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:08:38.128 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:08:39.514 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:08:39.516 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:08:39.516 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:08:39.516 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:08:39.516 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:08:39.520 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:08:39.529 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:08:39.530 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:08:39.748 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:08:39.748 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1584 ms
+2025-06-11 14:08:42.136 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:08:42.324 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:08:42.354 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:08:42.711 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:08:42.712 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:08:42.717 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:08:42.770 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:08:43.049 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:08:43.067 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:08:43.070 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:08:43.073 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:08:43.093 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:08:43.097 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:08:43.108 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:08:43.111 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:08:43.126 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:08:43.131 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:08:43.134 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:08:43.155 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:08:43.166 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:08:43.168 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:08:43.177 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:08:43.195 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 5.608 seconds (JVM running for 6.813)
+2025-06-11 14:09:42.041 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:09:42.042 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:09:42.043 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 14:09:42.105 [http-nio-8080-exec-1] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:09:42.173 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:09:42.305 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:13:31.934 [http-nio-8080-exec-3] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:13:47.639 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 36092 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:13:47.642 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:13:47.643 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:13:49.196 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:13:49.198 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:13:49.199 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:13:49.199 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:13:49.200 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:13:49.205 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:13:49.213 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:13:49.213 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:13:49.574 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:13:49.574 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1888 ms
+2025-06-11 14:13:51.867 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:13:51.964 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:13:51.980 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:13:52.141 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:13:52.142 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:13:52.146 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:13:52.180 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:13:52.346 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:13:52.360 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:13:52.362 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:13:52.364 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:13:52.380 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:13:52.385 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:13:52.391 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:13:52.393 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:13:52.400 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:13:52.403 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:13:52.406 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:13:52.423 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:13:52.432 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:13:52.434 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:13:52.440 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:13:52.455 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 5.522 seconds (JVM running for 7.042)
+2025-06-11 14:15:08.575 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:15:08.576 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:15:08.577 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 14:15:08.641 [http-nio-8080-exec-2] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:15:08.712 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:15:08.863 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:15:55.023 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 13144 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:15:55.026 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:15:55.027 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:15:56.176 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:15:56.177 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:15:56.178 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:15:56.178 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:15:56.178 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:15:56.181 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:15:56.187 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:15:56.187 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:15:56.333 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:15:56.333 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1266 ms
+2025-06-11 14:15:57.942 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:15:58.024 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:15:58.040 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:15:58.170 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:15:58.170 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:15:58.174 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:15:58.211 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:15:58.401 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:15:58.416 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:15:58.419 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:15:58.421 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:15:58.440 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:15:58.445 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:15:58.455 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:15:58.457 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:15:58.468 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:15:58.472 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:15:58.475 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:15:58.497 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:15:58.520 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:15:58.522 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:15:58.529 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:15:58.545 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 4.012 seconds (JVM running for 4.96)
+2025-06-11 14:19:21.050 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:19:21.051 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:19:21.053 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-11 14:19:21.124 [http-nio-8080-exec-2] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:19:21.210 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:19:21.367 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:29:17.676 [http-nio-8080-exec-3] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:31:50.451 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 15908 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:31:50.455 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:31:50.455 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:31:51.564 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:31:51.565 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:31:51.566 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:31:51.566 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:31:51.566 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:31:51.569 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:31:51.575 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:31:51.576 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:31:51.729 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:31:51.729 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1237 ms
+2025-06-11 14:31:53.442 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:31:53.529 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:31:53.546 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:31:53.687 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:31:53.688 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:31:53.692 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:31:53.720 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:31:53.835 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:31:53.842 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:31:53.843 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:31:53.845 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:31:53.856 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:31:53.859 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:31:53.866 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:31:53.868 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:31:53.873 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:31:53.876 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:31:53.879 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:31:53.890 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:31:53.898 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:31:53.899 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:31:53.904 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:31:53.916 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 3.947 seconds (JVM running for 4.857)
+2025-06-11 14:32:18.587 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:32:18.587 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:32:18.589 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-11 14:32:18.652 [http-nio-8080-exec-1] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:32:18.729 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:32:18.847 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:40:01.222 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 7212 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 14:40:01.224 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 14:40:01.224 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 14:40:02.737 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 14:40:02.737 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 14:40:02.738 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 14:40:02.738 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 14:40:02.738 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 14:40:02.741 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 14:40:02.747 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 14:40:02.747 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 14:40:02.905 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 14:40:02.905 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1645 ms
+2025-06-11 14:40:05.299 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 14:40:05.482 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 14:40:05.515 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 14:40:05.768 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 14:40:05.770 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 14:40:05.773 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 14:40:05.817 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 14:40:06.006 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 14:40:06.019 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 14:40:06.023 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 14:40:06.027 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 14:40:06.048 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 14:40:06.053 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 14:40:06.067 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 14:40:06.069 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 14:40:06.078 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 14:40:06.084 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 14:40:06.086 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 14:40:06.109 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 14:40:06.123 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 14:40:06.125 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 14:40:06.133 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 14:40:06.152 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 5.455 seconds (JVM running for 6.557)
+2025-06-11 14:40:19.056 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 14:40:19.057 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 14:40:19.058 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 14:40:19.119 [http-nio-8080-exec-1] INFO  com.kang.smdc.controller.mini.UserController - 账号密码登录：username=test
+2025-06-11 14:40:19.194 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 14:40:19.315 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-11 14:57:49.921 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m278ms867µs700ns).
+2025-06-11 15:07:05.325 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 27704 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 15:07:05.328 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 15:07:05.329 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 15:07:06.933 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 15:07:06.935 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 15:07:06.935 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 15:07:06.935 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 15:07:06.935 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 15:07:06.952 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 15:07:06.962 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 15:07:06.963 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 15:07:07.190 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 15:07:07.191 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1804 ms
+2025-06-11 15:07:09.184 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+2025-06-11 15:07:09.190 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-11 15:07:09.203 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-11 15:07:09.234 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.kang.smdc.SmdcApplication.main(SmdcApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 50 common frames omitted
+2025-06-11 15:07:43.864 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 40968 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 15:07:43.867 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 15:07:43.868 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 15:07:45.343 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 15:07:45.345 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 15:07:45.345 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 15:07:45.346 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 15:07:45.346 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 15:07:45.351 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 15:07:45.366 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 15:07:45.366 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 15:07:45.626 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 15:07:45.626 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1707 ms
+2025-06-11 15:07:47.902 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+2025-06-11 15:07:47.908 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-11 15:07:47.917 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-11 15:07:47.944 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.kang.smdc.SmdcApplication.main(SmdcApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 50 common frames omitted
+2025-06-11 15:08:49.639 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 39500 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 15:08:49.641 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 15:08:49.642 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 15:08:50.816 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 15:08:50.817 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 15:08:50.817 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 15:08:50.817 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 15:08:50.817 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 15:08:50.821 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 15:08:50.828 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 15:08:50.828 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 15:08:50.982 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 15:08:50.982 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1304 ms
+2025-06-11 15:08:52.610 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+2025-06-11 15:08:52.613 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-11 15:08:52.622 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-11 15:08:52.639 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-web/2.10.5/springfox-spring-web-2.10.5.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.kang.smdc.SmdcApplication.main(SmdcApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Environment/apache-maven-3.6.3/maven-repository/io/springfox/springfox-spring-webmvc/2.10.5/springfox-spring-webmvc-2.10.5.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.kang.smdc.controller.mini.UserController#update(User)
+to {POST [/mini/user/update]}: There is already 'miniUserController' bean method
+com.kang.smdc.controller.mini.MiniUserController#update(User) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 50 common frames omitted
+2025-06-11 15:11:16.930 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 38520 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 15:11:16.932 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 15:11:16.932 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 15:11:18.238 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 15:11:18.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 15:11:18.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 15:11:18.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 15:11:18.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 15:11:18.242 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 15:11:18.250 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 15:11:18.250 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 15:11:18.408 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 15:11:18.408 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1434 ms
+2025-06-11 15:11:20.199 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 15:11:20.298 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 15:11:20.315 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 15:11:20.480 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 15:11:20.481 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 15:11:20.484 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 15:11:20.517 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 15:11:20.673 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 15:11:20.683 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 15:11:20.685 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 15:11:20.687 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 15:11:20.699 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 15:11:20.703 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 15:11:20.710 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 15:11:20.712 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 15:11:20.720 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 15:11:20.727 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 15:11:20.730 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 15:11:20.749 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 15:11:20.760 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 15:11:20.763 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 15:11:20.769 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 15:11:20.787 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 4.39 seconds (JVM running for 5.354)
+2025-06-11 15:12:03.969 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 15:12:03.969 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 15:12:03.970 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 15:12:03.996 [http-nio-8080-exec-3] ERROR c.k.smdc.common.exception.GlobalExceptionHandler - 系统异常：Required request parameter 'username' for method parameter type String is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:218)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2025-06-11 15:12:09.850 [http-nio-8080-exec-10] ERROR c.k.smdc.common.exception.GlobalExceptionHandler - 系统异常：Required request parameter 'username' for method parameter type String is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:218)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2025-06-11 15:13:23.622 [http-nio-8080-exec-9] ERROR c.k.smdc.common.exception.GlobalExceptionHandler - 系统异常：Required request parameter 'username' for method parameter type String is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:218)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2025-06-11 15:18:55.853 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 24056 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-06-11 15:18:55.856 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-06-11 15:18:55.857 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 15:18:57.220 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-11 15:18:57.221 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-06-11 15:18:57.222 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-06-11 15:18:57.222 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-11 15:18:57.222 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-11 15:18:57.225 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-06-11 15:18:57.232 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 15:18:57.232 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-06-11 15:18:57.389 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 15:18:57.389 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1489 ms
+2025-06-11 15:18:59.088 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-06-11 15:18:59.189 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-11 15:18:59.211 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-06-11 15:18:59.379 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-11 15:18:59.380 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-06-11 15:18:59.384 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-06-11 15:18:59.417 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-06-11 15:18:59.570 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-06-11 15:18:59.580 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-06-11 15:18:59.583 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-06-11 15:18:59.586 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-06-11 15:18:59.604 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-06-11 15:18:59.608 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-06-11 15:18:59.617 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-06-11 15:18:59.619 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-06-11 15:18:59.625 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-06-11 15:18:59.628 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-06-11 15:18:59.630 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-06-11 15:18:59.646 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-06-11 15:18:59.655 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-06-11 15:18:59.656 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-06-11 15:18:59.661 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-06-11 15:18:59.676 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 4.451 seconds (JVM running for 5.991)
+2025-06-11 15:20:06.823 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11 15:20:06.823 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-11 15:20:06.824 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 15:20:06.895 [http-nio-8080-exec-2] INFO  com.kang.smdc.controller.mini.MiniUserController - 账号密码登录：username=test
+2025-06-11 15:20:06.975 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-11 15:20:07.152 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

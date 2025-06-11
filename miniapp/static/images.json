@@ -1,0 +1,49 @@
+{
+  "dish": {
+    "default": "/static/images/dish/default-dish.png",
+    "category": {
+      "hot": "/static/images/dish/category/hot.png",
+      "new": "/static/images/dish/category/new.png",
+      "recommend": "/static/images/dish/category/recommend.png"
+    }
+  },
+  "shop": {
+    "logo": "/static/images/shop/logo.png",
+    "background": "/static/images/shop/background.jpg",
+    "qrcode": "/static/images/shop/qrcode.png"
+  },
+  "user": {
+    "default_avatar": "/static/images/user/default-avatar.png",
+    "center": {
+      "order": "/static/images/user/center/order.png",
+      "address": "/static/images/user/center/address.png",
+      "favorite": "/static/images/user/center/favorite.png",
+      "settings": "/static/images/user/center/settings.png"
+    }
+  },
+  "order": {
+    "status": {
+      "pending": "/static/images/order/status/pending.png",
+      "paid": "/static/images/order/status/paid.png",
+      "processing": "/static/images/order/status/processing.png",
+      "completed": "/static/images/order/status/completed.png",
+      "cancelled": "/static/images/order/status/cancelled.png"
+    },
+    "payment": {
+      "wechat": "/static/images/order/payment/wechat.png",
+      "alipay": "/static/images/order/payment/alipay.png"
+    },
+    "action": {
+      "pay": "/static/images/order/action/pay.png",
+      "cancel": "/static/images/order/action/cancel.png",
+      "delete": "/static/images/order/action/delete.png"
+    }
+  },
+  "common": {
+    "cart": "/static/images/common/cart.png",
+    "loading": "/static/images/common/loading.gif",
+    "empty": "/static/images/common/empty.png",
+    "error": "/static/images/common/error.png",
+    "success": "/static/images/common/success.png"
+  }
+}
