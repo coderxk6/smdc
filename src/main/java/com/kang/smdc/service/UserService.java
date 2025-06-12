@@ -2,6 +2,7 @@ package com.kang.smdc.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.kang.smdc.entity.User;
+import com.kang.smdc.vo.LoginVO;
 
 /**
  * 用户Service接口
@@ -15,18 +16,18 @@ public interface UserService extends IService<User> {
    * 微信登录
    *
    * @param code 微信登录code
-   * @return 用户信息
+   * @return 用户信息和token
    */
-  User loginByWechat(String code);
+  LoginVO loginByWechat(String code);
 
   /**
    * 账号密码登录
    *
    * @param username 用户名
    * @param password 密码
-   * @return 用户信息
+   * @return 用户信息和token
    */
-  User loginByAccount(String username, String password);
+  LoginVO loginByAccount(String username, String password);
 
   /**
    * 获取当前登录用户信息

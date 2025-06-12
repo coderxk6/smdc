@@ -2,10 +2,11 @@ package com.kang.smdc.config;
 
 import com.kang.smdc.interceptor.AdminAuthInterceptor;
 import com.kang.smdc.interceptor.MiniAuthInterceptor;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -18,12 +19,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @since 2024-01-01
  */
 @Configuration
-@RequiredArgsConstructor
 @Slf4j
 public class WebMvcConfig implements WebMvcConfigurer {
 
-  private final AdminAuthInterceptor adminAuthInterceptor;
-  private final MiniAuthInterceptor miniAuthInterceptor;
+  @Autowired
+  private AdminAuthInterceptor adminAuthInterceptor;
+  @Autowired
+  @Lazy
+  private MiniAuthInterceptor miniAuthInterceptor;
 
   @Value("${smdc.upload.path}")
   private String uploadPath;

@@ -2,8 +2,15 @@
   <view class="login-title">扫码点餐</view>
   <view class="login-subtitle">欢迎使用我们的服务</view>
   <view class="login-tabs">
-    <view class="tab" wx:class="{{activeTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">微信登录</view>
-    <view class="tab" wx:class="{{activeTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">账号登录</view>
+    <view class="tab {{activeTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">微信登录</view>
+    <view class="tab {{activeTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">账号登录</view>
+  </view>
+  <view wx:if="{{activeTab === 0}}" class="login-form">
+    <button class="wechat-login-btn" open-type="getPhoneNumber" bindgetphonenumber="onWechatLogin">
+      <image src="/static/wechat-icon.png" class="wechat-icon" mode="aspectFit"></image>
+      微信一键登录
+    </button>
+    <view class="login-tips">点击按钮，快速安全登录</view>
   </view>
   <view wx:if="{{activeTab === 1}}" class="login-form">
     <view class="input-group">
@@ -17,5 +24,7 @@
     <button class="login-btn" bindtap="onLogin">账号登录</button>
     <view class="login-tips">测试账号: <text class="test-user">test</text> 测试密码: <text class="test-pwd">123456</text></view>
   </view>
-  <view class="login-footer">© 2025 扫码点餐系统</view>
+  <view class="login-footer">© 2024 扫码点餐系统</view>
+  <view class="decoration decoration-1"></view>
+  <view class="decoration decoration-2"></view>
 </view> 

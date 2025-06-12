@@ -1,2 +1,30 @@
 <!--pages/user/about/about.wxml-->
-<text>pages/user/about/about.wxml</text>
+<view class="about-container">
+  <view class="shop-info-card">
+    <image class="shop-logo" src="{{ shopInfo.logo }}" mode="aspectFit"></image>
+    <text class="shop-name">{{ shopInfo.name }}</text>
+    <text class="shop-slogan">{{ shopInfo.slogan }}</text>
+  </view>
+
+  <view class="info-section">
+    <view class="info-item" bindtap="openLocation">
+      <text class="label">店铺地址</text>
+      <text class="value address-value">{{ shopInfo.address }}</text>
+      <image class="arrow-right-icon" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" bindtap="callPhone">
+      <text class="label">联系电话</text>
+      <text class="value">{{ shopInfo.phone }}</text>
+      <image class="arrow-right-icon" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item">
+      <text class="label">营业时间</text>
+      <text class="value">{{ shopInfo.businessHours }}</text>
+    </view>
+  </view>
+
+  <view class="app-version">
+    <text>版本：1.0.0</text>
+    <text>© 2024 扫码点餐. All Rights Reserved.</text>
+  </view>
+</view>

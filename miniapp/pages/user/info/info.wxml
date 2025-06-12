@@ -1,2 +1,42 @@
 <!--pages/user/info/info.wxml-->
-<text>pages/user/info/info.wxml</text>
+<view class="user-info-container">
+  <form bindsubmit="submitForm">
+    <!-- 头像 -->
+    <view class="form-item avatar-item">
+      <text class="label text-dark">头像</text>
+      <button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="chooseAvatar">
+        <image class="avatar" src="{{ userInfo.avatarUrl }}" mode="aspectFill"></image>
+        <view class="camera-icon-wrapper">
+          <text class="camera-icon-text">更换</text>
+        </view>
+      </button>
+      <text class="arrow-right">›</text>
+    </view>
+
+    <!-- 昵称 -->
+    <view class="form-item">
+      <text class="label text-dark">昵称</text>
+      <input class="input-field" name="nickName" placeholder="请输入昵称" value="{{ userInfo.nickName }}" placeholder-class="placeholder-style" data-field="nickName" bindinput="onInput" />
+    </view>
+
+    <!-- 手机号 -->
+    <view class="form-item">
+      <text class="label text-dark">手机号</text>
+      <input class="input-field" name="phone" type="number" placeholder="请输入手机号" value="{{ userInfo.phone }}" placeholder-class="placeholder-style" data-field="phone" bindinput="onInput" />
+    </view>
+
+    <!-- 性别 -->
+    <view class="form-item">
+      <text class="label text-dark">性别</text>
+      <picker bindchange="bindGenderChange" value="{{ userInfo.gender }}" range="{{ genderOptions }}">
+        <view class="picker-text">{{ genderOptions[userInfo.gender] }}</view>
+      </picker>
+      <text class="arrow-right">›</text>
+    </view>
+
+    <!-- 保存按钮 -->
+    <view class="button-group">
+      <button class="submit-btn blue-gradient-bg" form-type="submit">保存修改</button>
+    </view>
+  </form>
+</view>

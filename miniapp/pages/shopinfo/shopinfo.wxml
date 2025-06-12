@@ -2,15 +2,24 @@
   <view class="shop-header">
     <image class="shop-logo" src="{{shopInfo.logo || '/images/default-logo.png'}}" mode="aspectFill"></image>
     <view class="shop-details">
-      <text class="shop-name">{{shopInfo.name}}</text>
-      <text class="shop-slogan">{{shopInfo.slogan}}</text>
+      <text class="shop-name">{{shopInfo.name || '加载中...'}}</text>
+      <text class="shop-slogan">{{shopInfo.slogan || '用心做好每一道菜'}}</text>
       <view class="shop-status {{shopInfo.status === 1 ? 'open' : 'closed'}}">
         {{shopInfo.status === 1 ? '营业中' : '休息中'}}
       </view>
     </view>
   </view>
 
-  <view class="info-card">
+  <view wx:if="{{!shopInfo}}" class="loading-container">
+    <view class="loading-dots">
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+    </view>
+    <text class="loading-text">加载店铺信息中...</text>
+  </view>
+
+  <view wx:else class="info-card">
     <view class="info-item">
       <text class="label">地址</text>
       <text class="value">{{shopInfo.address || '暂无地址'}}</text>
@@ -30,7 +39,10 @@
          longitude="{{shopInfo.longitude}}"
          latitude="{{shopInfo.latitude}}"
          scale="14"
-         markers="{{markers}}"
          show-location></map>
+  </view>
+  
+  <view wx:if="{{!shopInfo.latitude || !shopInfo.longitude}}" class="no-location-tip">
+    暂无位置信息
   </view>
 </view> 

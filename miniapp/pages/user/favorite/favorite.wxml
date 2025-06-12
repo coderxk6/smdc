@@ -1,2 +1,39 @@
 <!--pages/user/favorite/favorite.wxml-->
-<text>pages/user/favorite/favorite.wxml</text>
+<view class="favorite-list-container">
+  <scroll-view 
+    scroll-y 
+    class="favorite-list-scroll" 
+    bindscrolltolower="onReachBottom" 
+    refresher-enabled="true"
+    bindrefresherrefresh="onPullDownRefresh"
+    refresher-triggered="{{ loading }}"
+  >
+    <block wx:if="{{ favoriteList.length > 0 }}">
+      <view class="favorite-item" wx:for="{{ favoriteList }}" wx:key="id" bindtap="navigateToDishDetail" data-dishid="{{ item.dishId }}">
+        <image class="dish-image" src="{{ item.image }}" mode="aspectFill"></image>
+        <view class="dish-info">
+          <text class="dish-name">{{ item.name }}</text>
+          <text class="dish-price">¥{{ item.price }}</text>
+          <text class="dish-description">{{ item.description }}</text>
+        </view>
+        <button class="action-btn cancel-favorite-btn" bindtap="cancelFavorite" data-dishid="{{ item.dishId }}">取消收藏</button>
+      </view>
+    </block>
+    <block wx:else>
+      <!-- 空状态提示 -->
+      <view class="empty-tips">
+        <image src="/images/empty-favorite.png" class="empty-icon"></image>
+        <text>暂无收藏的菜品</text>
+        <text>快去收藏您喜欢的菜品吧！</text>
+      </view>
+    </block>
+
+    <!-- 加载更多提示 -->
+    <view wx:if="{{ loading }}" class="loading-tips">
+      <text>加载中...</text>
+    </view>
+    <view wx:if="{{ !hasMore && favoriteList.length > 0 && !loading }}" class="no-more-tips">
+      <text>没有更多了</text>
+    </view>
+  </scroll-view>
+</view>

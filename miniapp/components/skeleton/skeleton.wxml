@@ -1,0 +1,4 @@
+<!-- 骨架屏组件 -->
+<view class="skeleton-container {{loading ? 'skeleton-loading' : ''}}">
+  <slot></slot>
+</view> 

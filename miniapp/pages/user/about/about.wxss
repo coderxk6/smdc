@@ -1,1 +1,99 @@
 /* pages/user/about/about.wxss */
+@import "/styles/theme.wxss"; /* 导入主题颜色 */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: var(--weui-BG-0);
+  min-height: 100vh;
+}
+
+.shop-info-card {
+  background-color: var(--weui-BG-2);
+  border-radius: 20rpx;
+  padding: 40rpx 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.shop-logo {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin-bottom: 25rpx;
+  border: 4rpx solid var(--weui-FG-5);
+  overflow: hidden;
+}
+
+.shop-name {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--brand-color);
+  margin-bottom: 10rpx;
+}
+
+.shop-slogan {
+  font-size: 28rpx;
+  color: var(--weui-FG-2);
+  text-align: center;
+}
+
+.info-section {
+  width: 100%;
+  background-color: var(--weui-BG-2);
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid var(--weui-FG-5);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 32rpx;
+  color: var(--weui-FG-0);
+  width: 180rpx; /* 固定宽度，对齐 */
+  flex-shrink: 0;
+}
+
+.value {
+  flex: 1;
+  font-size: 30rpx;
+  color: var(--weui-FG-1);
+  text-align: right;
+}
+
+.address-value {
+  white-space: pre-wrap; /* 允许换行 */
+  text-align: left;
+}
+
+.arrow-right-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+  flex-shrink: 0;
+}
+
+.app-version {
+  margin-top: 60rpx;
+  font-size: 24rpx;
+  color: var(--weui-FG-3);
+  text-align: center;
+  line-height: 1.6;
+}

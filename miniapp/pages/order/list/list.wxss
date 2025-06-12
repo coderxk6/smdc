@@ -1,1 +1,201 @@
 /* pages/order/list/list.wxss */
+@import "/styles/theme.wxss"; /* 导入主题颜色 */
+
+.order-list-container {
+  height: 100vh; /* 确保容器占满屏幕高度，以便scroll-view可以滚动 */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--weui-BG-0);
+}
+
+.van-tabs {
+  flex-shrink: 0; /* 标签栏不收缩 */
+}
+
+.order-list-scroll {
+  flex: 1; /* 滚动区域占据剩余空间 */
+}
+
+.order-list {
+  padding: 20rpx;
+}
+
+.order-item {
+  background-color: var(--weui-BG-2);
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid var(--weui-FG-5);
+  font-size: 28rpx;
+  color: var(--weui-FG-1);
+}
+
+.order-number {
+  font-weight: bold;
+}
+
+.order-status {
+  font-weight: bold;
+}
+
+.order-dishes {
+  padding: 20rpx 30rpx;
+}
+
+.dish-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.dish-row:last-child {
+  margin-bottom: 0;
+}
+
+.dish-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+
+.dish-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-name {
+  font-size: 30rpx;
+  color: var(--weui-FG-0);
+  margin-bottom: 8rpx;
+}
+
+.dish-spec {
+  font-size: 26rpx;
+  color: var(--weui-FG-3);
+}
+
+.dish-quantity {
+  font-size: 28rpx;
+  color: var(--weui-FG-2);
+  margin-left: auto;
+}
+
+.dish-amount {
+  font-size: 30rpx;
+  color: var(--weui-FG-0);
+  font-weight: bold;
+  width: 120rpx; /* 固定宽度，防止抖动 */
+  text-align: right;
+}
+
+.order-total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-top: 20rpx;
+  border-top: 1rpx dashed var(--weui-FG-5);
+  margin-top: 20rpx;
+}
+
+.total-text {
+  font-size: 28rpx;
+  color: var(--weui-FG-2);
+  margin-right: 10rpx;
+}
+
+.total-amount {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid var(--weui-FG-5);
+}
+
+.order-time {
+  font-size: 24rpx;
+  color: var(--weui-FG-3);
+}
+
+.order-actions {
+  display: flex;
+  gap: 10rpx; /* 按钮之间的间距 */
+}
+
+.action-btn {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  padding: 0 25rpx;
+  border-radius: 30rpx;
+  background-color: var(--weui-BG-1);
+  color: var(--weui-FG-1);
+  border: 1rpx solid var(--weui-FG-4);
+  /* 小程序按钮默认样式重置 */
+  display: inline-flex; /* 确保内容居中 */
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn::after {
+  border: none; /* 移除默认边框 */
+}
+
+.pay-btn {
+  background-color: var(--brand-color);
+  color: #fff;
+  border-color: var(--brand-color);
+}
+
+.comment-btn {
+  background-color: var(--weui-GREEN);
+  color: #fff;
+  border-color: var(--weui-GREEN);
+}
+
+.cancel-btn {
+  color: var(--weui-RED);
+  border-color: var(--weui-RED);
+  background-color: #fff;
+}
+
+/* 空状态提示 */
+.empty-tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx 0;
+  color: var(--weui-FG-3);
+  font-size: 28rpx;
+}
+
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 加载提示 */
+.loading-tips,
+.no-more-tips {
+  text-align: center;
+  padding: 20rpx 0;
+  color: var(--weui-FG-3);
+  font-size: 26rpx;
+}

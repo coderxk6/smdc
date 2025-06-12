@@ -19,21 +19,43 @@
   </view>
 
   <!-- 分类导航 -->
-  <scroll-view class="category-nav" scroll-x="true" enable-flex="true">
-    <view wx:for="{{homeData.categories}}" wx:key="id" class="category-item" bindtap="goToCategory" data-category-id="{{item.id}}" data-category-name="{{item.name}}">
+  <scroll-view class="category-nav" scroll-x="true" enable-flex="true" show-scrollbar="false">
+    <view 
+      wx:for="{{homeData.categories}}" 
+      wx:key="id" 
+      class="category-item {{currentCategoryId === item.id ? 'active' : ''}}" 
+      bindtap="goToCategory" 
+      data-category-id="{{item.id}}" 
+      data-category-name="{{item.name}}"
+    >
       <text>{{item.name}}</text>
     </view>
+    
+    <!-- 骨架屏 -->
+    <block wx:if="{{!homeData.categories || homeData.categories.length === 0}}">
+      <view class="category-item skeleton-bg" wx:for="{{4}}" wx:key="index"></view>
+    </block>
   </scroll-view>
+
+  <!-- 加载中 -->
+  <view wx:if="{{isLoading}}" class="loading-container">
+    <view class="loading-dots">
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+      <view class="loading-dot"></view>
+    </view>
+    <text class="loading-text">加载中...</text>
+  </view>
 
   <!-- 推荐菜品 -->
   <view class="dish-section" wx:if="{{homeData.recommendDishes && homeData.recommendDishes.length > 0}}">
-    <text class="section-title">⭐️ 推荐菜品</text>
+    <text class="section-title">推荐菜品</text>
     <view class="dish-list">
       <view wx:for="{{homeData.recommendDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
-        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <image class="dish-image" src="{{item.image || '/images/default-logo.png'}}" mode="aspectFill"></image>
         <view class="dish-info">
           <text class="dish-name">{{item.name}}</text>
-          <text class="dish-price">¥ {{item.price}}</text>
+          <text class="dish-price">{{item.price}}</text>
         </view>
       </view>
     </view>
@@ -41,13 +63,13 @@
 
   <!-- 热门菜品 -->
   <view class="dish-section" wx:if="{{homeData.hotDishes && homeData.hotDishes.length > 0}}">
-    <text class="section-title">🔥 热门菜品</text>
+    <text class="section-title">热门菜品</text>
     <view class="dish-list">
       <view wx:for="{{homeData.hotDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
-        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <image class="dish-image" src="{{item.image || '/images/default-logo.png'}}" mode="aspectFill"></image>
         <view class="dish-info">
           <text class="dish-name">{{item.name}}</text>
-          <text class="dish-price">¥ {{item.price}}</text>
+          <text class="dish-price">{{item.price}}</text>
         </view>
       </view>
     </view>
@@ -55,19 +77,35 @@
 
   <!-- 新品菜品 -->
   <view class="dish-section" wx:if="{{homeData.newDishes && homeData.newDishes.length > 0}}">
-    <text class="section-title">✨ 新品上市</text>
+    <text class="section-title">新品上市</text>
     <view class="dish-list">
       <view wx:for="{{homeData.newDishes}}" wx:key="id" class="dish-item" bindtap="goToDishDetail" data-dish-id="{{item.id}}">
-        <image class="dish-image" src="{{item.image || '/images/default-dish.png'}}" mode="aspectFill"></image>
+        <image class="dish-image" src="{{item.image || '/images/default-logo.png'}}" mode="aspectFill"></image>
         <view class="dish-info">
           <text class="dish-name">{{item.name}}</text>
-          <text class="dish-price">¥ {{item.price}}</text>
+          <text class="dish-price">{{item.price}}</text>
         </view>
       </view>
     </view>
   </view>
 
-  <view class="no-data-tip" wx:if="{{!homeData.shopInfo && !homeData.categories.length && !homeData.recommendDishes.length && !homeData.hotDishes.length && !homeData.newDishes.length}}">
+  <!-- 骨架屏 -->
+  <block wx:if="{{!homeData.recommendDishes || homeData.recommendDishes.length === 0}}">
+    <view class="dish-section skeleton-section">
+      <view class="section-title skeleton-bg"></view>
+      <view class="dish-list">
+        <view class="dish-item skeleton-item" wx:for="{{4}}" wx:key="index">
+          <view class="skeleton-image"></view>
+          <view class="skeleton-info">
+            <view class="skeleton-text"></view>
+            <view class="skeleton-text skeleton-price"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="no-data-tip" wx:if="{{!isLoading && !homeData.shopInfo && !homeData.categories.length && !homeData.recommendDishes.length && !homeData.hotDishes.length && !homeData.newDishes.length}}">
     暂无数据，请稍后重试或联系商家。
   </view>
 

@@ -5,6 +5,7 @@ import com.kang.smdc.common.util.JwtUtil;
 import com.kang.smdc.controller.mini.dto.LoginRequest;
 import com.kang.smdc.entity.User;
 import com.kang.smdc.service.UserService;
+import com.kang.smdc.vo.LoginVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -35,10 +36,10 @@ public class MiniUserController {
    */
   @PostMapping("/login")
   @ApiOperation("微信登录")
-  public Result<User> login(@ApiParam("微信登录code") @RequestParam String code) {
+  public Result<LoginVO> login(@ApiParam("微信登录code") @RequestParam String code) {
     log.info("微信登录：code={}", code);
-    User user = userService.loginByWechat(code);
-    return Result.success(user);
+    LoginVO loginVO = userService.loginByWechat(code);
+    return Result.success(loginVO);
   }
 
   /**
@@ -50,10 +51,10 @@ public class MiniUserController {
    */
   @PostMapping("/account/login")
   @ApiOperation("账号密码登录")
-  public Result<User> loginByAccount(@RequestBody LoginRequest loginRequest) {
+  public Result<LoginVO> loginByAccount(@RequestBody LoginRequest loginRequest) {
     log.info("账号密码登录：username={}", loginRequest.getUsername());
-    User user = userService.loginByAccount(loginRequest.getUsername(), loginRequest.getPassword());
-    return Result.success(user);
+    LoginVO loginVO = userService.loginByAccount(loginRequest.getUsername(), loginRequest.getPassword());
+    return Result.success(loginVO);
   }
 
   /**

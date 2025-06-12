@@ -5,12 +5,11 @@
 }
 
 .top-section {
-  background-color: var(--primary-color); /* 品牌主色调 */
-  padding: 30rpx;
-  border-bottom-left-radius: 40rpx;
-  border-bottom-right-radius: 40rpx;
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-primary-color));
+  padding: 30rpx 30rpx 80rpx;
   position: relative;
   z-index: 1;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
 }
 
 .shop-info {
@@ -23,9 +22,10 @@
 .shop-logo {
   width: 100rpx;
   height: 100rpx;
-  border-radius: 50%;
+  border-radius: 8rpx;
   margin-right: 20rpx;
   border: 2rpx solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
 }
 
 .shop-name-status {
@@ -38,19 +38,20 @@
   font-size: 38rpx;
   font-weight: bold;
   margin-bottom: 5rpx;
+  text-shadow: 0 1rpx 3rpx rgba(0, 0, 0, 0.2);
 }
 
 .shop-slogan {
   font-size: 26rpx;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .shop-status {
-  font-size: 24rpx;
-  padding: 6rpx 12rpx;
+  font-size: 22rpx;
+  padding: 4rpx 10rpx;
   border-radius: 6rpx;
   align-self: flex-start;
-  margin-top: 5rpx;
+  margin-top: 8rpx;
 }
 
 .shop-status.open {
@@ -66,17 +67,17 @@
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff;
   border-radius: 50rpx;
   padding: 15rpx 30rpx;
   color: #666;
   font-size: 28rpx;
-  margin: 0 20rpx;
   box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
 }
 
 .search-icon {
   margin-right: 15rpx;
+  color: var(--primary-color);
 }
 
 .search-placeholder {
@@ -87,38 +88,91 @@
   white-space: nowrap;
   padding: 20rpx 0;
   background-color: #fff;
-  margin: -40rpx 20rpx 20rpx;
-  border-radius: 20rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  margin: -50rpx 20rpx 20rpx;
+  border-radius: 16rpx;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  z-index: 2;
 }
 
 .category-item {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 30rpx;
+  padding: 10rpx 30rpx;
   font-size: 28rpx;
-  color: #333;
+  color: var(--text-color-dark);
+  position: relative;
 }
 
-.category-item text {
-  line-height: 1;
+.category-item:after {
+  content: '';
+  position: absolute;
+  bottom: -6rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4rpx;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.category-item.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.category-item.active:after {
+  width: 40rpx;
+}
+
+.loading-container {
+  margin: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.loading-text {
+  font-size: 26rpx;
+  color: var(--text-color-light);
 }
 
 .dish-section {
   margin: 20rpx;
   background-color: #fff;
-  border-radius: 20rpx;
+  border-radius: 16rpx;
   padding: 30rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.dish-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rpx;
+  height: 36rpx;
+  background-color: var(--primary-color);
+  margin: 30rpx 0 0 0;
 }
 
 .section-title {
-  font-size: 36rpx;
+  font-size: 32rpx;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 30rpx;
-  display: block;
+  color: var(--text-color-dark);
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
 }
 
 .dish-list {
@@ -129,45 +183,53 @@
 
 .dish-item {
   width: 48%; /* 两个菜品一行 */
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
   background-color: #fff;
-  border-radius: 16rpx;
+  border-radius: 12rpx;
   overflow: hidden;
   box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
-  padding-bottom: 20rpx; /* 留出底部信息空间 */
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.dish-item:nth-child(odd) {
-  margin-right: 4%; /* 调整间距 */
+.dish-item:active {
+  transform: scale(0.98);
+  box-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.05);
 }
 
 .dish-image {
   width: 100%;
   height: 200rpx;
-  border-top-left-radius: 16rpx;
-  border-top-right-radius: 16rpx;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
 }
 
 .dish-info {
-  padding: 20rpx;
+  padding: 16rpx;
   display: flex;
   flex-direction: column;
 }
 
 .dish-name {
-  font-size: 32rpx;
+  font-size: 28rpx;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 10rpx;
+  color: var(--text-color-dark);
+  margin-bottom: 8rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .dish-price {
-  font-size: 36rpx;
-  color: var(--primary-color); /* 品牌主色调 */
+  font-size: 32rpx;
+  color: var(--price-color);
   font-weight: bold;
+}
+
+.dish-price:before {
+  content: '¥';
+  font-size: 24rpx;
+  margin-right: 2rpx;
 }
 
 .no-data-tip {
@@ -175,4 +237,78 @@
   color: #999;
   font-size: 28rpx;
   padding: 50rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-data-tip::before {
+  content: '😔';
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 骨架屏样式 */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-bg {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  color: transparent !important;
+  border-radius: 8rpx;
+}
+
+.skeleton-section {
+  background-color: #fff;
+}
+
+.skeleton-section::before {
+  display: none;
+}
+
+.section-title.skeleton-bg {
+  width: 200rpx;
+  height: 32rpx;
+  margin-bottom: 30rpx;
+}
+
+.skeleton-item {
+  box-shadow: none;
+  background: transparent;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 200rpx;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12rpx 12rpx 0 0;
+}
+
+.skeleton-info {
+  padding: 16rpx;
+}
+
+.skeleton-text {
+  height: 28rpx;
+  width: 80%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.skeleton-price {
+  width: 50%;
+  height: 32rpx;
 } 

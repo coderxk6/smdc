@@ -3,20 +3,66 @@
 
   <!-- 用户信息区域 -->
   <view class="user-info-card" bindtap="editUserInfo">
-    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
-    <text class="nickname">{{userInfo.nickName}}</text>
-    <text class="welcome-text">欢迎使用扫码点餐系统</text>
+    <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <text class="nickname">{{userInfo.nickName || '未登录用户'}}</text>
+    <text class="welcome-text">{{userInfo.id ? '欢迎使用扫码点餐系统' : '点击登录/注册'}}</text>
+  </view>
+
+  <!-- 订单状态卡片 -->
+  <view class="order-status-card">
+    <view class="order-title">
+      <text class="text-dark">我的订单</text>
+      <view class="view-all" bindtap="viewAllOrders">
+        <text>查看全部</text>
+        <text class="arrow-right">›</text>
+      </view>
+    </view>
+    <view class="order-status-list">
+      <view class="status-item" bindtap="navigateToOrdersByStatus" data-status="1">
+        <view class="status-icon">
+          <text class="iconfont">₮</text>
+          <view wx:if="{{orderCounts.waitPay > 0}}" class="badge">{{orderCounts.waitPay}}</view>
+        </view>
+        <text class="status-text">待付款</text>
+      </view>
+      <view class="status-item" bindtap="navigateToOrdersByStatus" data-status="2">
+        <view class="status-icon">
+          <text class="iconfont">✓</text>
+          <view wx:if="{{orderCounts.waitAccept > 0}}" class="badge">{{orderCounts.waitAccept}}</view>
+        </view>
+        <text class="status-text">待接单</text>
+      </view>
+      <view class="status-item" bindtap="navigateToOrdersByStatus" data-status="3">
+        <view class="status-icon">
+          <text class="iconfont">⟳</text>
+          <view wx:if="{{orderCounts.waitServe > 0}}" class="badge">{{orderCounts.waitServe}}</view>
+        </view>
+        <text class="status-text">待上菜</text>
+      </view>
+      <view class="status-item" bindtap="navigateToOrdersByStatus" data-status="4">
+        <view class="status-icon">
+          <text class="iconfont">✔</text>
+        </view>
+        <text class="status-text">已完成</text>
+      </view>
+    </view>
   </view>
 
   <!-- 功能菜单列表 -->
   <view class="menu-list">
     <block wx:for="{{menuList}}" wx:key="name">
       <view class="menu-item" bindtap="navigateToPage" data-path="{{item.path}}">
-        <image class="menu-icon" src="{{item.icon}}" mode="aspectFit"></image>
-        <text class="menu-name">{{item.name}}</text>
-        <image class="arrow-right" src="/images/arrow-right.png" mode="aspectFit"></image>
+        <view class="menu-icon blue-text">{{item.icon}}</view>
+        <text class="menu-name text-dark">{{item.name}}</text>
+        <text class="arrow-right">›</text>
       </view>
     </block>
+  </view>
+
+  <!-- 登录提示 -->
+  <view wx:if="{{!userInfo.id}}" class="login-tip">
+    <text>您还未登录，部分功能将受限</text>
+    <button class="login-btn blue-gradient-bg" bindtap="goToLogin">立即登录</button>
   </view>
 
   <!-- 底部Tab导航栏，由小程序配置，无需在此编写 -->

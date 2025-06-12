@@ -1,6 +1,6 @@
 /* miniapp/pages/shopinfo/shopinfo.wxss */
 .container {
-  padding: 20rpx;
+  padding: 0 0 20rpx;
   background-color: var(--background-color);
   min-height: 100vh;
 }
@@ -8,19 +8,33 @@
 .shop-header {
   display: flex;
   align-items: center;
-  background-color: #fff;
-  padding: 30rpx;
-  border-radius: 16rpx;
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-primary-color));
+  padding: 40rpx 30rpx;
   margin-bottom: 20rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.shop-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60rpx;
+  height: 4rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 2rpx;
 }
 
 .shop-logo {
-  width: 160rpx;
-  height: 160rpx;
-  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
   margin-right: 30rpx;
-  border: 4rpx solid #eee;
+  border: 4rpx solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
@@ -31,47 +45,115 @@
 }
 
 .shop-name {
-  font-size: 48rpx;
+  font-size: 40rpx;
   font-weight: bold;
-  color: #333;
   margin-bottom: 10rpx;
+  text-shadow: 0 1rpx 3rpx rgba(0, 0, 0, 0.2);
 }
 
 .shop-slogan {
-  font-size: 28rpx;
-  color: #666;
+  font-size: 26rpx;
+  opacity: 0.9;
   margin-bottom: 15rpx;
 }
 
 .shop-status {
-  font-size: 26rpx;
-  padding: 8rpx 16rpx;
-  border-radius: 8rpx;
+  font-size: 22rpx;
+  padding: 6rpx 12rpx;
+  border-radius: 6rpx;
   align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .shop-status.open {
-  background-color: #e6f7e2;
-  color: #52c41a;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .shop-status.closed {
-  background-color: #f0f2f5;
-  color: #999;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.loading-container {
+  margin: 0 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 40rpx 30rpx;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.loading-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 0 6rpx;
+  opacity: 0.6;
+}
+
+.loading-dot:nth-child(1) {
+  animation: loading-dot 1.4s ease-in-out 0s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation: loading-dot 1.4s ease-in-out 0.2s infinite;
+}
+
+.loading-dot:nth-child(3) {
+  animation: loading-dot 1.4s ease-in-out 0.4s infinite;
+}
+
+@keyframes loading-dot {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+.loading-text {
+  font-size: 26rpx;
+  color: var(--text-color-light);
 }
 
 .info-card {
   background-color: #fff;
   border-radius: 16rpx;
-  padding: 30rpx;
-  margin-bottom: 20rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  padding: 20rpx 30rpx;
+  margin: 0 20rpx 20rpx;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rpx;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.2;
 }
 
 .info-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20rpx 0;
   border-bottom: 1rpx solid var(--border-color);
 }
@@ -81,28 +163,62 @@
 }
 
 .label {
-  font-size: 30rpx;
-  color: #888;
+  font-size: 28rpx;
+  color: var(--text-color-light);
   min-width: 120rpx;
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.label::before {
+  content: '';
+  display: inline-block;
+  width: 8rpx;
+  height: 8rpx;
+  background-color: var(--primary-color);
+  margin-right: 10rpx;
+  border-radius: 50%;
 }
 
 .value {
-  font-size: 32rpx;
-  color: #333;
-  text-align: right;
+  font-size: 28rpx;
+  color: var(--text-color-dark);
   flex: 1;
-  word-break: break-all;
 }
 
 .map-section {
-  background-color: #fff;
+  margin: 0 20rpx;
   border-radius: 16rpx;
-  padding: 20rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.map-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 0 0 10rpx rgba(0, 151, 255, 0.1);
+  z-index: 1;
 }
 
 #shopMap {
   width: 100%;
   height: 400rpx;
-  border-radius: 8rpx;
+}
+
+.no-location-tip {
+  margin: 0 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  color: var(--text-color-light);
+  font-size: 28rpx;
 } 

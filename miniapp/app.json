@@ -12,20 +12,22 @@
     "pages/shopinfo/shopinfo",
     "pages/search/search",
     "pages/address/list/list",
+    "pages/address/edit/edit",
     "pages/user/favorite/favorite",
     "pages/user/about/about",
     "pages/user/info/info"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FF5722",
+    "navigationBarBackgroundColor": "#0097FF",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "扫码点餐",
     "backgroundColor": "#f7fafd",
-    "backgroundTextStyle": "light"
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#888",
-    "selectedColor": "#FF5722",
+    "selectedColor": "#0097FF",
     "backgroundColor": "#fff",
     "list": [
       {

@@ -1,0 +1,8 @@
+<!-- 空状态组件 -->
+<view class="empty-container">
+  <image class="empty-image" src="/static/images/empty.png" mode="aspectFit"></image>
+  <text class="empty-text">{{text || '暂无数据'}}</text>
+  <view class="empty-button" wx:if="{{buttonText}}" bindtap="onButtonTap">
+    {{buttonText}}
+  </view>
+</view> 
