@@ -36,7 +36,6 @@ Page({
                 id: 1,
                 latitude: shopInfo.latitude,
                 longitude: shopInfo.longitude,
-                iconPath: '/images/location-icon.png', // 确保你有这个图标
                 width: 30,
                 height: 30
               }]

@@ -1,5 +1,162 @@
+@import "/styles/theme.wxss";
+
 page {
-  background: #f7fafd;
-  color: #222;
+  background: var(--background-color);
+  color: var(--text-color-dark);
   font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: 28rpx;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* 通用样式 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.multi-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price-text {
+  color: var(--price-color);
+  font-weight: bold;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: #333333;
+  font-weight: 500;
+}
+
+.text-medium {
+  color: #666666;
+}
+
+.text-light {
+  color: #999999;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  padding: 16rpx 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 6rpx 10rpx rgba(0, 151, 255, 0.2);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #333;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  padding: 16rpx 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 6rpx 10rpx rgba(255, 209, 97, 0.2);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+}
+
+/* 加载动画 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 0 6rpx;
+  opacity: 0.6;
+}
+
+.loading-dot:nth-child(1) {
+  animation: loading-dot 1.4s ease-in-out 0s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation: loading-dot 1.4s ease-in-out 0.2s infinite;
+}
+
+.loading-dot:nth-child(3) {
+  animation: loading-dot 1.4s ease-in-out 0.4s infinite;
+}
+
+@keyframes loading-dot {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* 无数据提示 */
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 0;
+  color: var(--text-color-light);
+  font-size: 28rpx;
+}
+
+.no-data::before {
+  content: "😔";
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 蓝色主题元素 */
+.blue-gradient-bg {
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-primary-color));
+  color: #fff;
+}
+
+.blue-text {
+  color: var(--primary-color);
+}
+
+.blue-border {
+  border: 2rpx solid var(--primary-color);
+}
+
+.blue-shadow {
+  box-shadow: 0 4rpx 12rpx rgba(0, 151, 255, 0.15);
 } 

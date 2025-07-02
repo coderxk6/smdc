@@ -1,56 +1,116 @@
+import request from '../../utils/request';
+import store from '../../utils/store';
+
+const app = getApp();
+
 Page({
   data: {
-    activeTab: 1,
+    activeTab: 'wechat', // 'wechat' 或 'account'
     username: '',
     password: ''
   },
-  switchTab (e) {
-    this.setData({
-      activeTab: Number(e.currentTarget.dataset.index)
-    });
+
+  onLoad () {
     // 自动填充测试账号
     this.setData({
       username: 'test',
       password: '123456'
     });
   },
+
+  // 切换登录方式
+  switchTab (e) {
+    const tab = e.currentTarget.dataset.tab;
+    this.setData({ activeTab: tab });
+  },
+
   onInputUsername (e) {
     this.setData({ username: e.detail.value });
   },
+
   onInputPassword (e) {
     this.setData({ password: e.detail.value });
   },
-  onLogin () {
+
+  // 处理登录
+  async handleLogin () {
+    if (this.data.activeTab === 'wechat') {
+      this.handleWechatLogin();
+    } else {
+      this.handleAccountLogin();
+    }
+  },
+
+  // 微信登录
+  async handleWechatLogin () {
+    try {
+      // 获取用户信息
+      const { code } = await wx.login();
+
+      // 调用后端登录接口
+      const res = await request.post('/mini/user/login', { code });
+
+      // 保存登录信息
+      wx.setStorageSync('token', res.token);
+      store.set('userInfo', res.userInfo);
+
+      // 跳转到首页
+      wx.showToast({ title: '跳转首页' });
+      wx.reLaunch({
+        url: '/pages/index/index'
+      });
+    } catch (error) {
+      wx.showToast({
+        title: error.message || '登录失败',
+        icon: 'none'
+      });
+    }
+  },
+
+  // 账号密码登录
+  async handleAccountLogin () {
     const { username, password } = this.data;
+
     if (!username || !password) {
-      wx.showToast({ title: '请输入账号和密码', icon: 'none' });
+      wx.showToast({
+        title: '请输入账号和密码',
+        icon: 'none'
+      });
       return;
     }
-    wx.showLoading({ title: '登录中...' });
-    wx.request({
-      url: 'http://127.0.0.1:8080/mini/user/account/login',
-      method: 'POST',
-      data: { username, password },
-      header: { 'content-type': 'application/json' },
-      success: res => {
-        wx.hideLoading();
-        if (res.data.code === 1 && res.data.data) {
-          wx.setStorageSync('user', res.data.data);
-          wx.showToast({ title: '登录成功', icon: 'success' });
-          setTimeout(() => {
-            wx.reLaunch({ url: '/pages/index/index' });
-          }, 500);
-        } else {
-          wx.showToast({ title: res.data.msg || '登录失败', icon: 'none' });
-        }
-      },
-      fail: () => {
-        wx.hideLoading();
-        wx.showToast({ title: '网络错误', icon: 'none' });
+
+    try {
+      // 调用后端登录接口
+      const res = await request.post('/mini/user/account/login', {
+        username,
+        password
+      });
+
+      console.log('登录接口返回：', res);
+
+      if (res.token) {
+        wx.setStorageSync('token', res.token);
+        store.set('userInfo', res.userInfo);
+        console.log('准备跳转');
+        wx.showToast({ title: '跳转首页' });
+        wx.reLaunch({
+          url: '/pages/index/index'
+        });
+      } else {
+        wx.showToast({
+          title: '登录失败',
+          icon: 'none'
+        });
       }
-    });
+    } catch (error) {
+      wx.showToast({
+        title: error.message || '登录失败',
+        icon: 'none'
+      });
+    }
   },
+
   onInputConfirm (e) {
-    this.onLogin();
+    this.handleLogin();
   }
 }); 

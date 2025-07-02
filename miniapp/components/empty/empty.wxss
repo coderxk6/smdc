@@ -1,0 +1,27 @@
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+.empty-image {
+  width: 240rpx;
+  height: 240rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+
+.empty-button {
+  padding: 16rpx 32rpx;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+} 

@@ -1,3 +1,5 @@
+@import "/styles/theme.wxss"; /* 导入主题颜色 */
+
 .user-container {
   padding: 100rpx 40rpx;
   text-align: center;
@@ -11,4 +13,215 @@
 .user-info {
   font-size: 28rpx;
   color: #888;
+}
+
+.user-center-container {
+  padding: 0 0 30rpx;
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+.user-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 40rpx;
+  background: var(--gradient-primary);
+  color: #fff;
+  position: relative;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 151, 255, 0.2);
+}
+
+.user-info-card::after {
+  content: '';
+  position: absolute;
+  bottom: -15rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100rpx;
+  height: 6rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3rpx;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10rpx;
+  text-shadow: 0 1rpx 3rpx rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 订单状态卡片 */
+.order-status-card {
+  margin: 0 20rpx 20rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-status-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rpx;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.order-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+.arrow-right {
+  font-size: 36rpx;
+  color: #ccc;
+  margin-left: 6rpx;
+}
+
+.order-status-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.status-item:active {
+  opacity: 0.8;
+}
+
+.status-icon {
+  position: relative;
+  margin-bottom: 10rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon .iconfont {
+  font-size: 40rpx;
+  color: var(--primary-color);
+}
+
+.badge {
+  position: absolute;
+  top: -10rpx;
+  right: -20rpx;
+  min-width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  background-color: var(--error-color);
+  color: #fff;
+  border-radius: 16rpx;
+  font-size: 20rpx;
+  padding: 0 6rpx;
+  font-weight: bold;
+  box-shadow: 0 2rpx 6rpx rgba(255, 83, 57, 0.3);
+}
+
+.status-text {
+  font-size: 24rpx;
+  color: var(--text-color-dark);
+}
+
+.menu-list {
+  margin: 0 20rpx;
+  border-radius: var(--border-radius-base);
+  background-color: #fff;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid var(--border-color-base);
+  font-size: 30rpx;
+  position: relative;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:active {
+  background-color: var(--background-color-hover);
+}
+
+.menu-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.blue-text {
+  color: var(--primary-color);
+}
+
+.menu-name {
+  flex: 1;
+}
+
+/* 登录提示 */
+.login-tip {
+  margin: 60rpx 40rpx;
+  text-align: center;
+  color: var(--text-color-light);
+  font-size: 28rpx;
+}
+
+.login-btn {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--button-shadow);
 } 

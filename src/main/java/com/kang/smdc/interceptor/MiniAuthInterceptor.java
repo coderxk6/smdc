@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.context.annotation.Lazy;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +20,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class MiniAuthInterceptor implements HandlerInterceptor {
 
+  @Lazy
   private final UserService userService;
   private final ObjectMapper objectMapper;
 

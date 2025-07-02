@@ -12,6 +12,8 @@ Page({
       hotDishes: [],
       newDishes: [],
     },
+    currentCategoryId: null, // 当前选中的分类ID
+    isLoading: true, // 添加加载状态
   },
 
   /**
@@ -25,19 +27,26 @@ Page({
    * 获取首页数据
    */
   getHomeData () {
-    wx.showLoading({
-      title: '加载中',
+    this.setData({
+      isLoading: true
     });
+
     wx.request({
       url: app.globalData.baseUrl + '/mini/home/data',
       method: 'GET',
       success: (res) => {
-        wx.hideLoading();
         if (res.data.code === 1) {
+          const homeData = res.data.data;
           this.setData({
-            homeData: res.data.data
+            homeData: homeData,
+            // 默认选中第一个分类
+            currentCategoryId: homeData.categories && homeData.categories.length > 0 ? homeData.categories[0].id : null,
+            isLoading: false
           });
         } else {
+          this.setData({
+            isLoading: false
+          });
           wx.showToast({
             title: res.data.msg || '获取首页数据失败',
             icon: 'none'
@@ -45,14 +54,24 @@ Page({
         }
       },
       fail: (err) => {
-        wx.hideLoading();
         console.error('获取首页数据请求失败', err);
+        this.setData({
+          isLoading: false
+        });
         wx.showToast({
           title: '网络错误',
           icon: 'none'
         });
       }
     });
+  },
+
+  /**
+   * 下拉刷新
+   */
+  onPullDownRefresh () {
+    this.getHomeData();
+    wx.stopPullDownRefresh();
   },
 
   /**
@@ -79,6 +98,12 @@ Page({
   goToCategory (e) {
     const categoryId = e.currentTarget.dataset.categoryId;
     const categoryName = e.currentTarget.dataset.categoryName;
+
+    // 更新当前选中的分类
+    this.setData({
+      currentCategoryId: categoryId
+    });
+
     wx.navigateTo({
       url: `/pages/dish/dish?categoryId=${categoryId}&categoryName=${categoryName}`
     });
@@ -98,6 +123,16 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage () {
+    return {
+      title: this.data.homeData.shopInfo ? this.data.homeData.shopInfo.name : '扫码点餐',
+      path: '/pages/index/index'
+    };
+  },
 
-  }
-}); 
+  addToCart (e) {
+    wx.showToast({
+      title: '已加入购物车',
+      icon: 'success'
+    });
+  },
+});

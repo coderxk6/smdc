@@ -10,14 +10,20 @@
     "pages/order/detail/detail",
     "pages/user/user",
     "pages/shopinfo/shopinfo",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/address/list/list",
+    "pages/address/edit/edit",
+    "pages/user/favorite/favorite",
+    "pages/user/about/about",
+    "pages/user/info/info"
   ],
   "window": {
     "navigationBarBackgroundColor": "#0097FF",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "扫码点餐",
     "backgroundColor": "#f7fafd",
-    "backgroundTextStyle": "light"
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#888",
@@ -27,14 +33,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/tab-home.png",
-        "selectedIconPath": "static/tab-home-active.png"
+        "iconPath": "images/tab_home.png",
+        "selectedIconPath": "images/tab_home_active.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "我的",
-        "iconPath": "static/tab-user.png",
-        "selectedIconPath": "static/tab-user-active.png"
+        "iconPath": "images/tab_user.png",
+        "selectedIconPath": "images/tab_user_active.png"
       }
     ]
   },

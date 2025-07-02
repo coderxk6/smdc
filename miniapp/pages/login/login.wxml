@@ -1,21 +1,36 @@
 <view class="login-container">
-  <view class="login-title">扫码点餐</view>
-  <view class="login-subtitle">欢迎使用我们的服务</view>
+  <view class="header">
+    <text class="title">扫码点餐</text>
+    <text class="subtitle">欢迎使用我们的服务</text>
+  </view>
+
   <view class="login-tabs">
-    <view class="tab" wx:class="{{activeTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">微信登录</view>
-    <view class="tab" wx:class="{{activeTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">账号登录</view>
-  </view>
-  <view wx:if="{{activeTab === 1}}" class="login-form">
-    <view class="input-group">
-      <image src="/static/user.png" class="input-icon"/>
-      <input class="login-input" placeholder="请输入账号" value="{{username}}" bindinput="onInputUsername" bindconfirm="onInputConfirm"/>
+    <view class="tab {{activeTab === 'wechat' ? 'active' : ''}}" bindtap="switchTab" data-tab="wechat">
+      <text>微信登录</text>
     </view>
-    <view class="input-group">
-      <image src="/static/lock.png" class="input-icon"/>
-      <input class="login-input" placeholder="请输入密码" password value="{{password}}" bindinput="onInputPassword" bindconfirm="onInputConfirm"/>
+    <view class="tab {{activeTab === 'account' ? 'active' : ''}}" bindtap="switchTab" data-tab="account">
+      <text>账号登录</text>
     </view>
-    <button class="login-btn" bindtap="onLogin">账号登录</button>
-    <view class="login-tips">测试账号: <text class="test-user">test</text> 测试密码: <text class="test-pwd">123456</text></view>
   </view>
-  <view class="login-footer">© 2025 扫码点餐系统</view>
+
+  <view class="login-form" wx:if="{{activeTab === 'account'}}">
+    <view class="form-item">
+      <image class="icon" src="/static/images/user.png" mode="aspectFit"></image>
+      <input class="input" type="text" placeholder="请输入用户名" value="{{username}}" bindinput="onInputUsername" />
+    </view>
+    <view class="form-item">
+      <image class="icon" src="/static/images/lock.png" mode="aspectFit"></image>
+      <input class="input" type="password" placeholder="请输入密码" value="{{password}}" bindinput="onInputPassword" />
+    </view>
+    <view class="test-account">测试账号: test 测试密码: 123456</view>
+  </view>
+
+  <view class="login-button {{activeTab === 'wechat' ? 'wechat-button' : ''}}" bindtap="handleLogin">
+    <image wx:if="{{activeTab === 'wechat'}}" class="wechat-icon" src="/static/images/wechat.png" mode="aspectFit"></image>
+    <text>{{activeTab === 'wechat' ? '微信一键登录' : '登录'}}</text>
+  </view>
+
+  <view class="login-footer">© 2024 扫码点餐系统</view>
+  <view class="decoration decoration-1"></view>
+  <view class="decoration decoration-2"></view>
 </view> 

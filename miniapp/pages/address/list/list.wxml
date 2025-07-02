@@ -1,0 +1,42 @@
+<!--pages/address/list/list.wxml-->
+<view class="address-list-container">
+  <scroll-view scroll-y class="address-list-scroll">
+    <block wx:if="{{ addressList.length > 0 }}">
+      <view 
+        class="address-item {{ item.isDefault === 1 ? 'default-address' : '' }}"
+        wx:for="{{ addressList }}"
+        wx:key="id"
+        bindtap="{{ isSelecting ? 'selectAddress' : 'navigateToDetail' }}" 
+        data-address="{{ item }}" 
+        data-id="{{ item.id }}"
+      >
+        <view class="address-info">
+          <view class="name-phone">
+            <text class="name">{{ item.name }}</text>
+            <text class="phone">{{ item.phone }}</text>
+            <text class="default-tag" wx:if="{{ item.isDefault === 1 }}">默认</text>
+          </view>
+          <view class="detail-address">{{ item.province }}{{ item.city }}{{ item.district }}{{ item.detail }}</view>
+        </view>
+        
+        <view class="address-actions" wx:if="{{ !isSelecting }}">
+          <image class="action-icon edit-icon" src="/images/edit-icon.png" bindtap="editAddress" data-id="{{ item.id }}"></image>
+          <image class="action-icon delete-icon" src="/images/delete-icon.png" bindtap="deleteAddress" data-id="{{ item.id }}"></image>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <!-- 空状态提示 -->
+      <view class="empty-tips">
+        <image src="/images/empty-address.png" class="empty-icon"></image>
+        <text>暂无收货地址</text>
+        <text>请添加您的收货地址</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 新增地址按钮 -->
+  <view class="add-address-btn-wrapper">
+    <button class="add-address-btn" bindtap="addAddress">+ 新增收货地址</button>
+  </view>
+</view>

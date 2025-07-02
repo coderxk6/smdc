@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
   "projectname": "扫码点餐小程序",
-  "appid": "your-appid-here",
+  "appid": "wx0da77d513cde0750",
   "setting": {
     "urlCheck": false,
     "es6": true,
@@ -16,7 +16,16 @@
       "outputPath": ""
     },
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "compileWorklet": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "minifyWXSS": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true
   },
   "compileType": "miniprogram",
   "libVersion": "3.8.8",

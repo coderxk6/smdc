@@ -1,10 +1,216 @@
 /* miniapp/styles/theme.wxss */
+/* 品牌主色调 - 蓝色系主题 */
 :root {
-  --primary-color: #0097FF; /* 饿了么蓝色调 */
-  --light-primary-color: #e6f7ff;
-  --dark-primary-color: #006bb6;
-  --text-color-dark: #333;
-  --text-color-light: #666;
-  --border-color: #eee;
-  --background-color: #f8f8f8;
+  /* 主色调 */
+  --primary-color: #0097FF; /* 主蓝色调(饿了么蓝) */
+  --secondary-color: #36BFFA; /* 次要蓝色调 */
+  --accent-color: #0085E5; /* 强调蓝色 */
+  --dark-primary-color: #0070CC; /* 深蓝色 */
+  --light-primary-color: #E6F7FF; /* 浅蓝色 */
+  
+  /* 功能色 */
+  --success-color: #07C160; /* 成功色 */
+  --warning-color: #FFC300; /* 警告色 */
+  --error-color: #FF5339; /* 错误色 */
+  --info-color: #909399; /* 信息色 */
+  
+  /* 文本颜色 */
+  --text-color-dark: #333333; /* 主要文字色 */
+  --text-color-medium: #666666; /* 次要文字色 */
+  --text-color-light: #999999; /* 辅助文字色 */
+  --text-color-placeholder: #CCCCCC; /* 占位文字色 */
+  
+  /* 边框颜色 */
+  --border-color-base: #EBEEF5; /* 基础边框色 */
+  --border-color-light: #F2F6FC; /* 浅色边框 */
+  --border-color-dark: #DCDFE6; /* 深色边框 */
+  
+  /* 背景颜色 */
+  --background-color: #F5FAFF; /* 页面背景色 */
+  --background-color-light: #FFFFFF; /* 亮色背景 */
+  --background-color-hover: #F0F9FF; /* 悬停背景 */
+  
+  /* 价格颜色 */
+  --price-color: #FF5339; /* 价格红色 */
+  --price-color-discount: #FF9500; /* 折扣价格 */
+  
+  /* 阴影 */
+  --card-shadow: 0 4rpx 12rpx rgba(0, 151, 255, 0.1);
+  --button-shadow: 0 6rpx 16rpx rgba(0, 151, 255, 0.2);
+  --popup-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+  
+  /* 渐变 */
+  --gradient-primary: linear-gradient(135deg, #0097FF, #0070CC);
+  --gradient-secondary: linear-gradient(135deg, #36BFFA, #0097FF);
+  
+  /* 圆角 */
+  --border-radius-small: 8rpx;
+  --border-radius-base: 16rpx;
+  --border-radius-large: 30rpx;
+  --border-radius-circle: 50%;
+  
+  /* 动效时间 */
+  --animation-duration-fast: 0.2s;
+  --animation-duration-base: 0.3s;
+  --animation-duration-slow: 0.4s;
+  
+  /* 行高 */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.8;
+  
+  /* 字体大小 */
+  --font-size-mini: 24rpx;
+  --font-size-small: 28rpx;
+  --font-size-medium: 32rpx;
+  --font-size-large: 36rpx;
+  --font-size-xlarge: 40rpx;
+  --font-size-xxlarge: 48rpx;
+  
+  /* 间距 */
+  --spacing-mini: 10rpx;
+  --spacing-small: 20rpx;
+  --spacing-medium: 30rpx;
+  --spacing-large: 40rpx;
+  --spacing-xlarge: 50rpx;
+}
+
+/* 向后兼容旧的变量名称 */
+page {
+  --brand-color: var(--primary-color);
+  --weui-BG-0: var(--background-color);
+  --weui-BG-1: var(--background-color-light);
+  --weui-BG-2: var(--background-color-light);
+  
+  --weui-FG-0: var(--text-color-dark);
+  --weui-FG-1: var(--text-color-dark);
+  --weui-FG-2: var(--text-color-medium);
+  --weui-FG-3: var(--text-color-light);
+  
+  --weui-RED: var(--error-color);
+  --weui-GREEN: var(--success-color);
+  --weui-BLUE: var(--primary-color);
+  --weui-ORANGE: var(--warning-color);
+  
+  --weui-BG-COLOR-NAV: var(--primary-color);
+  --weui-FG-COLOR-NAV: #ffffff;
+
+  /* 主题颜色变量 */
+  --primary-color: #0097FF;
+  --primary-light: #E5F4FF;
+  --primary-gradient: linear-gradient(135deg, #0097FF, #0077FF);
+  
+  /* 文字颜色 */
+  --text-main: #333333;
+  --text-secondary: #666666;
+  --text-description: #999999;
+  
+  /* 背景颜色 */
+  --bg-page: #F8F8F8;
+  --bg-card: #FFFFFF;
+  --bg-mask: rgba(0, 0, 0, 0.4);
+  
+  /* 边框颜色 */
+  --border-color: #EEEEEE;
+  
+  /* 阴影 */
+  --shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+}
+
+/* 通用样式类 */
+.card {
+  background: var(--bg-card);
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 16rpx;
+  box-shadow: var(--shadow-sm);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.price {
+  color: #FF5B05;
+  font-weight: bold;
+}
+
+.price::before {
+  content: '¥';
+  font-size: 80%;
+  margin-right: 2rpx;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 32rpx;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+  transition: opacity 0.2s;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2rpx solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* 列表样式 */
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  background: var(--bg-card);
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* 表单样式 */
+.form-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  background: var(--bg-card);
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+.form-label {
+  width: 180rpx;
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: var(--text-main);
 } 

@@ -1,0 +1,85 @@
+/* miniapp/pages/address/edit/edit.wxss */
+@import "/styles/theme.wxss"; /* 导入主题颜色 */
+
+.address-edit-container {
+  padding: 30rpx;
+  background-color: var(--weui-BG-0);
+  min-height: 100vh;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--weui-BG-2);
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+  height: 100rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.03);
+}
+
+.form-item.large-height {
+  height: auto;
+  padding: 20rpx 30rpx;
+}
+
+.label {
+  width: 160rpx;
+  font-size: 32rpx;
+  color: var(--weui-FG-0);
+  flex-shrink: 0;
+}
+
+input,
+textarea {
+  flex: 1;
+  font-size: 32rpx;
+  color: var(--weui-FG-1);
+  height: 100%; /* 确保输入框在父元素中垂直居中 */
+  padding: 0; /* 移除默认padding */
+}
+
+textarea {
+  min-height: 120rpx;
+  padding: 0; /* 移除默认padding */
+}
+
+.placeholder-style {
+  color: var(--weui-FG-3);
+}
+
+.picker-text {
+  flex: 1;
+  font-size: 32rpx;
+  color: var(--weui-FG-1);
+}
+
+.picker-text.placeholder-style {
+  color: var(--weui-FG-3);
+}
+
+.switch-item {
+  justify-content: space-between;
+}
+
+.button-group {
+  margin-top: 50rpx;
+}
+
+.submit-btn {
+  background-color: var(--brand-color);
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-bottom: 20rpx;
+}
+
+.delete-btn {
+  background-color: var(--weui-RED);
+}
+
+.submit-btn::after {
+  border: none;
+} 

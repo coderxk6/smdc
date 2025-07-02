@@ -1,97 +1,150 @@
+@import "/styles/theme.wxss";
+
 .login-container {
-  padding: 80rpx 40rpx 0 40rpx;
-  background: #f7fafd;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 40rpx;
+  background: linear-gradient(180deg, var(--primary-light) 0%, #ffffff 30%);
+  position: relative;
+  overflow: hidden;
 }
-.login-title {
+
+.header {
+  text-align: center;
+  margin: 60rpx 0;
+}
+
+.title {
   font-size: 48rpx;
   font-weight: bold;
-  color: #409EFF;
-  margin-top: 100rpx;
-  letter-spacing: 4rpx;
+  color: var(--text-main);
+  margin-bottom: 16rpx;
+  display: block;
 }
-.login-subtitle {
+
+.subtitle {
   font-size: 28rpx;
-  color: #888;
-  margin-bottom: 60rpx;
-  margin-top: 12rpx;
+  color: var(--text-secondary);
+  display: block;
 }
+
 .login-tabs {
   display: flex;
-  width: 100%;
-  margin-bottom: 40rpx;
-  border-bottom: 2rpx solid #e6f0fa;
+  justify-content: center;
+  margin-bottom: 48rpx;
+  position: relative;
+  z-index: 1;
 }
+
 .tab {
-  flex: 1;
-  text-align: center;
+  position: relative;
+  padding: 20rpx 40rpx;
   font-size: 32rpx;
-  padding: 20rpx 0;
-  color: #8bb8f7;
-  border-bottom: 4rpx solid transparent;
-  transition: all 0.2s;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
 }
+
 .tab.active {
-  color: #409EFF;
-  border-bottom: 4rpx solid #409EFF;
-  font-weight: bold;
-  background: #e6f0fa;
+  color: var(--primary-color);
+  font-weight: 500;
 }
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48rpx;
+  height: 4rpx;
+  background: var(--primary-color);
+  border-radius: 2rpx;
+}
+
 .login-form {
-  width: 100%;
-  margin-top: 30rpx;
+  margin: 48rpx 0;
 }
-.input-group {
+
+.form-item {
   display: flex;
   align-items: center;
   background: #fff;
+  padding: 24rpx 32rpx;
+  margin-bottom: 24rpx;
   border-radius: 16rpx;
-  box-shadow: 0 2rpx 8rpx #e6f0fa;
-  margin-bottom: 32rpx;
-  padding: 0 24rpx;
+  box-shadow: var(--shadow-sm);
 }
-.input-icon {
+
+.icon {
   width: 40rpx;
   height: 40rpx;
+  margin-right: 24rpx;
+}
+
+.input {
+  flex: 1;
+  font-size: 28rpx;
+  color: var(--text-main);
+}
+
+.test-account {
+  font-size: 24rpx;
+  color: var(--text-description);
+  text-align: center;
+  margin-top: 24rpx;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48rpx auto;
+  width: 90%;
+  height: 88rpx;
+  background: var(--primary-gradient);
+  border-radius: 44rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+  box-shadow: 0 8rpx 16rpx rgba(0, 151, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.login-button:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 4rpx 8rpx rgba(0, 151, 255, 0.2);
+}
+
+.wechat-button {
+  background: #07c160;
+  box-shadow: 0 8rpx 16rpx rgba(7, 193, 96, 0.2);
+}
+
+.wechat-icon {
+  width: 44rpx;
+  height: 44rpx;
   margin-right: 16rpx;
 }
-.login-input {
-  flex: 1;
-  height: 88rpx;
-  border: none;
-  font-size: 32rpx;
-  background: transparent;
-}
-.login-btn {
-  width: 100%;
-  height: 88rpx;
-  background: linear-gradient(90deg, #409EFF 60%, #66b1ff 100%);
-  color: #fff;
-  font-size: 36rpx;
-  border-radius: 44rpx;
-  margin-top: 24rpx;
-  box-shadow: 0 8rpx 24rpx #409eff33;
-  font-weight: bold;
-  border: none;
-}
-.login-tips {
-  margin-top: 32rpx;
-  color: #aaa;
-  font-size: 26rpx;
-  text-align: center;
-}
-.test-user, .test-pwd {
-  color: #409EFF;
-  font-weight: bold;
-}
+
 .login-footer {
   position: absolute;
   bottom: 40rpx;
-  width: 100%;
+  left: 0;
+  right: 0;
   text-align: center;
-  color: #bbb;
   font-size: 24rpx;
-} 
+  color: var(--text-description);
+}
+
+.decoration {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.1;
+}
+
+.decoration-1 {
+  width: 400rpx;
+  height: 400rpx;
+  top: -200rpx;
+  right: -200rpx;
+}
