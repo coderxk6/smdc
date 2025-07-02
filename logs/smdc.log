@@ -1,12 +1,89 @@
-2025-06-17 09:20:48.740 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=17h33m58s780ms148µs999ns).
-2025-06-17 09:31:04.127 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=3m45s298ms492µs400ns).
-2025-06-17 09:53:13.698 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=6m39s229ms823µs501ns).
-2025-06-17 10:50:25.162 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m10s78ms697µs600ns).
-2025-06-17 11:06:51.669 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=14m51s896ms703µs501ns).
-2025-06-17 13:34:27.380 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=40m30s514ms176µs499ns).
-2025-06-17 13:47:57.265 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=7m3s264ms90µs200ns).
-2025-06-17 15:09:27.609 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=16m59s131ms190µs1ns).
-2025-06-17 15:38:23.012 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=16m52s126ms516µs100ns).
-2025-06-17 18:51:58.659 [http-nio-8080-exec-3] INFO  com.kang.smdc.controller.mini.MiniUserController - 账号密码登录：username=test
-2025-06-17 18:52:04.802 [http-nio-8080-exec-6] INFO  com.kang.smdc.controller.mini.MiniUserController - 账号密码登录：username=test
-2025-06-17 18:52:28.977 [http-nio-8080-exec-5] INFO  com.kang.smdc.controller.mini.MiniUserController - 账号密码登录：username=test
+2025-07-02 09:05:06.548 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=10h44m46s865ms713µs800ns).
+2025-07-02 09:39:08.208 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=12m29s994ms953µs500ns).
+2025-07-02 10:24:15.144 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 19932 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-07-02 10:24:15.149 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-07-02 10:24:15.150 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 10:24:17.679 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 10:24:17.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-07-02 10:24:17.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-07-02 10:24:17.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-07-02 10:24:17.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-07-02 10:24:17.700 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-07-02 10:24:17.712 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 10:24:17.712 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-07-02 10:24:17.921 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 10:24:17.921 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2721 ms
+2025-07-02 10:24:19.676 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-07-02 10:24:19.987 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-02 10:24:20.004 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-07-02 10:24:20.180 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 10:24:20.180 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-07-02 10:24:20.184 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-07-02 10:24:20.206 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-07-02 10:24:20.336 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-07-02 10:24:20.343 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-07-02 10:24:20.343 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-07-02 10:24:20.343 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-07-02 10:24:20.358 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-07-02 10:24:20.358 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-07-02 10:24:20.369 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-07-02 10:24:20.369 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-07-02 10:24:20.374 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-07-02 10:24:20.378 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-07-02 10:24:20.385 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_3
+2025-07-02 10:24:20.385 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_2
+2025-07-02 10:24:20.390 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-07-02 10:24:20.390 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-07-02 10:24:20.390 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_2
+2025-07-02 10:24:20.411 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-07-02 10:24:20.415 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-07-02 10:24:20.422 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-07-02 10:24:20.425 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_5
+2025-07-02 10:24:20.453 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 6.211 seconds (JVM running for 8.946)
+2025-07-02 10:32:37.598 [main] INFO  com.kang.smdc.SmdcApplication - Starting SmdcApplication using Java 1.8.0_271 on LAPTOP-4SK4LL6T with PID 25664 (D:\Documents\git_project\smdc\target\classes started by XK in D:\Documents\git_project\smdc)
+2025-07-02 10:32:37.598 [main] DEBUG com.kang.smdc.SmdcApplication - Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-07-02 10:32:37.598 [main] INFO  com.kang.smdc.SmdcApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-02 10:32:39.903 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 10:32:39.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2025-07-02 10:32:39.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.26] using APR version [1.7.0].
+2025-07-02 10:32:39.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-07-02 10:32:39.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-07-02 10:32:39.919 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1i  8 Dec 2020]
+2025-07-02 10:32:39.919 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 10:32:39.919 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-07-02 10:32:40.140 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 10:32:40.140 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2492 ms
+2025-07-02 10:32:41.853 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-07-02 10:32:42.144 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-02 10:32:42.160 [main] INFO  com.kang.smdc.config.WebMvcConfig - 开始进行静态资源映射...
+2025-07-02 10:32:42.329 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 10:32:42.329 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2025-07-02 10:32:42.329 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2025-07-02 10:32:42.361 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2025-07-02 10:32:42.488 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_1
+2025-07-02 10:32:42.488 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2025-07-02 10:32:42.505 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2025-07-02 10:32:42.505 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2025-07-02 10:32:42.513 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingGET_2
+2025-07-02 10:32:42.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_1
+2025-07-02 10:32:42.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2025-07-02 10:32:42.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2025-07-02 10:32:42.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_2
+2025-07-02 10:32:42.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2025-07-02 10:32:42.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_3
+2025-07-02 10:32:42.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_2
+2025-07-02 10:32:42.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2025-07-02 10:32:42.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2025-07-02 10:32:42.553 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_2
+2025-07-02 10:32:42.553 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_3
+2025-07-02 10:32:42.571 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getInfoUsingGET_4
+2025-07-02 10:32:42.571 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: loginUsingPOST_1
+2025-07-02 10:32:42.571 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_5
+2025-07-02 10:32:42.603 [main] INFO  com.kang.smdc.SmdcApplication - Started SmdcApplication in 5.653 seconds (JVM running for 7.203)
+2025-07-02 10:53:26.471 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 10:53:26.476 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-02 10:53:26.557 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 81 ms
+2025-07-02 10:53:26.872 [http-nio-8080-exec-2] INFO  com.kang.smdc.controller.mini.MiniUserController - 账号密码登录：username=test
+2025-07-02 10:53:27.122 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2025-07-02 10:53:27.426 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2025-07-02 10:54:02.270 [http-nio-8080-exec-3] INFO  com.kang.smdc.controller.mini.MiniShopController - 小程序获取店铺信息

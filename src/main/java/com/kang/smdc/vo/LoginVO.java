@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class LoginVO {
 
   @ApiModelProperty("用户信息")
-  private User user;
+  private User userInfo;
 
   @ApiModelProperty("认证token")
   private String token;

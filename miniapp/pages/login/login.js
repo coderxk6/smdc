@@ -55,7 +55,8 @@ Page({
       store.set('userInfo', res.userInfo);
 
       // 跳转到首页
-      wx.switchTab({
+      wx.showToast({ title: '跳转首页' });
+      wx.reLaunch({
         url: '/pages/index/index'
       });
     } catch (error) {
@@ -85,14 +86,22 @@ Page({
         password
       });
 
-      // 保存登录信息
-      wx.setStorageSync('token', res.token);
-      store.set('userInfo', res.userInfo);
+      console.log('登录接口返回：', res);
 
-      // 跳转到首页
-      wx.switchTab({
-        url: '/pages/index/index'
-      });
+      if (res.token) {
+        wx.setStorageSync('token', res.token);
+        store.set('userInfo', res.userInfo);
+        console.log('准备跳转');
+        wx.showToast({ title: '跳转首页' });
+        wx.reLaunch({
+          url: '/pages/index/index'
+        });
+      } else {
+        wx.showToast({
+          title: '登录失败',
+          icon: 'none'
+        });
+      }
     } catch (error) {
       wx.showToast({
         title: error.message || '登录失败',

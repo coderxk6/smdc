@@ -16,11 +16,11 @@
   <view class="login-form" wx:if="{{activeTab === 'account'}}">
     <view class="form-item">
       <image class="icon" src="/static/images/user.png" mode="aspectFit"></image>
-      <input class="input" type="text" placeholder="请输入用户名" model:value="{{username}}" />
+      <input class="input" type="text" placeholder="请输入用户名" value="{{username}}" bindinput="onInputUsername" />
     </view>
     <view class="form-item">
       <image class="icon" src="/static/images/lock.png" mode="aspectFit"></image>
-      <input class="input" type="password" placeholder="请输入密码" model:value="{{password}}" />
+      <input class="input" type="password" placeholder="请输入密码" value="{{password}}" bindinput="onInputPassword" />
     </view>
     <view class="test-account">测试账号: test 测试密码: 123456</view>
   </view>

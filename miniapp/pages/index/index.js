@@ -127,5 +127,12 @@ Page({
       title: this.data.homeData.shopInfo ? this.data.homeData.shopInfo.name : '扫码点餐',
       path: '/pages/index/index'
     };
-  }
+  },
+
+  addToCart (e) {
+    wx.showToast({
+      title: '已加入购物车',
+      icon: 'success'
+    });
+  },
 });
